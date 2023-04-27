@@ -1,0 +1,19 @@
+@use "./variables" as *;
+
+@use "./mixin" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 80%;
+  max-width: $container-width;
+  margin: 0 auto;
+}

@@ -1,0 +1,28 @@
+@use "./general/variables" as *;
+
+@use "./general/typography.scss" as *;
+
+@use "./general/general.scss" as *;
+
+
+@use "./general/utils.scss" as *;
+
+
+
+// IMPORT FONT
+@import '@fontsource/amita/index.css';
+
+
+
+h1 {
+  font-family: $primary-font;
+  color: white;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: $primary-color;
+}

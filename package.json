@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/amita": "^4.5.10",
     "vue": "^3.2.47"
   },
   "devDependencies": {
