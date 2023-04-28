@@ -1,7 +1,15 @@
 
 <script>
+import {mainMenu} from "../data/menus"
+
+
 export default {
-  name: "Header"
+  name: "Header",
+  data(){
+    return{
+      mainMenu
+    }
+  }
 }
 </script>
 
@@ -14,16 +22,10 @@ export default {
 
     <nav>
       <ul>
-        <li><a href="#">characters</a></li>
-        <li><a href="#">comics</a></li>
-        <li><a href="#">movies</a></li>
-        <li><a href="#">tv</a></li>
-        <li><a href="#">games</a></li>
-        <li><a href="#">collectibles</a></li>
-        <li><a href="#">video</a></li>
-        <li><a href="#">fans</a></li>
-        <li><a href="#">news</a></li>
-        <li><a href="#">shop</a></li>
+        <li v-for="(link, index) in mainMenu" :key="index">
+          <a :class="{'active' : link.isActive}" :href="link.href">{{link.text}}</a>
+        </li>
+        
       </ul>
     </nav>
   </header>
@@ -31,15 +33,26 @@ export default {
 
 <style lang="scss" scoped>
 @use "../scss/general/mixin" as *;
+@use "../scss/general/variables" as *;
+
 
 header{
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   ul{
-    @include centerFlex("horizontal");
+    display: flex;
+    }
     a{
-      padding: 10px;
+      color: #6c6c6c;
       text-transform: uppercase;
+      padding: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      &:hover,
+      &.active{
+        color: $primary-color;
+      }
     }
   }
-}
 </style>
