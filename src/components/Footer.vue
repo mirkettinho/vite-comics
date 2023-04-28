@@ -98,7 +98,6 @@ export default {
 }
 footer{
   padding-top: 1rem;
-  height: 400px;
 
   .top{
     display: flex;
@@ -123,10 +122,10 @@ footer{
       }
     }
     .logo-bg{
-      position: absolute;
-      top: 200px;
-      right: 250px;
-    }
+    position: absolute;
+    top: 200px;
+    right: 250px;
+  }
   }
   .bottom{
     

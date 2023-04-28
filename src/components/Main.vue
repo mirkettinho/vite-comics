@@ -7,12 +7,12 @@ export default {
 
 <template>
   <div class="black">
-    <div class="container ht-100">
+    <div class="container ht-200">
       <h1>--> Content goes here --> </h1>
     </div>
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
